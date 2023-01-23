@@ -47,7 +47,7 @@ const ServiceDetails = () => {
   };
 
   const fetchServiceDetail = () => {
-    axios.get('https://hiremeapi-production.up.railway.app/webapp/service-detail', {
+    axios.get('https://hireme-backend.up.railway.app/webapp/service-detail', {
       headers: {
         'Accept': 'application/json'
       },
@@ -71,7 +71,7 @@ const ServiceDetails = () => {
     data.append("serviceRemark", serviceRemark)
     data.append("serviceID", serviceDetail?.service_id)
 
-    await axios.post('https://hiremeapi-production.up.railway.app/webapp/book-service/', data,{
+    await axios.post('https://hireme-backend.up.railway.app/webapp/book-service/', data,{
       headers:{
         'Authorization': 'Token ' + token['mytoken'],
       }

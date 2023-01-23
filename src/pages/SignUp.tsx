@@ -110,7 +110,7 @@ const SignUp = (): JSX.Element => {
 		data.append('last_name', last_name)
 		data.append('email', email)
 
-        axios.post('https://hiremeapi-production.up.railway.app/webapp/api/register/', data)
+        axios.post('https://hireme-backend.up.railway.app/webapp/api/register/', data)
             .then((response) => {
                 // setToken('mytoken',response.data.token)
                 console.log(response.data)
@@ -127,7 +127,7 @@ const SignUp = (): JSX.Element => {
 
         console.log(data.get('profile_image'))
         await sleep(1500) 
-        await axios.put('https://hiremeapi-production.up.railway.app/webapp/profile/', data, {
+        await axios.put('https://hireme-backend.up.railway.app/webapp/profile/', data, {
             headers: {
             'Accept': 'application/json',
             },
@@ -151,7 +151,7 @@ const SignUp = (): JSX.Element => {
 		data.append('password', password)
 
         await sleep(1500) 
-		await axios.post('https://hiremeapi-production.up.railway.app/webapp/auth/', data)
+		await axios.post('https://hireme-backend.up.railway.app/webapp/auth/', data)
 			.then((response) => {
 				setToken('mytoken',response.data.token)
 			})
@@ -165,7 +165,7 @@ const SignUp = (): JSX.Element => {
 		data.append('github_url', github_url)
 		data.append('facebook_url', facebook_url)
 
-        await axios.post('https://hiremeapi-production.up.railway.app/webapp/freelancer/', data, {
+        await axios.post('https://hireme-backend.up.railway.app/webapp/freelancer/', data, {
             headers: {
 				'Accept': 'application/json',
                 'Authorization': 'Token ' + token['mytoken']

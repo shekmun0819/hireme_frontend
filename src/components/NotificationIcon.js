@@ -22,7 +22,7 @@ const Notification = () => {
 
     const updateNotification = async () => {
       
-      await axios.put('https://hiremeapi-production.up.railway.app/webapp/notification/', newNotification, {
+      await axios.put('https://hireme-backend.up.railway.app/webapp/notification/', newNotification, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const Notification = () => {
     };
 
     const fetchNewNotification = async () => {
-      await axios.get('https://hiremeapi-production.up.railway.app/webapp/new-notification', {
+      await axios.get('https://hireme-backend.up.railway.app/webapp/new-notification', {
         headers: {
           'Accept': 'application/json',
           'Authorization': 'Token ' + token['mytoken']
