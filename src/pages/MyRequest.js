@@ -70,7 +70,7 @@ const MyRequest = () => {
     // Get selected rows' details
     var selectedBookings = myRequest.filter((row) => selectedRows.includes(row.booking_id));
 
-		await axios.put('http://127.0.0.1:8000/webapp/my-request/', selectedBookings, {
+		await axios.put('https://hiremeapi-production.up.railway.app/webapp/my-request/', selectedBookings, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const MyRequest = () => {
 	};
 
 	const fetchMyRequest = async () => {
-    await axios.get('http://127.0.0.1:8000/webapp/my-request', {
+    await axios.get('https://hiremeapi-production.up.railway.app/webapp/my-request', {
       headers: {
         'Accept': 'application/json',
         'Authorization': 'Token ' + token['mytoken']

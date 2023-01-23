@@ -39,7 +39,7 @@ const Login = (): JSX.Element => {
 		data.append('username', username)
 		data.append('password', password)
 
-        axios.post('http://127.0.0.1:8000/webapp/auth/', data)
+        axios.post('https://hiremeapi-production.up.railway.app/webapp/auth/', data)
             .then((response) => {
                 setToken('mytoken',response.data.token)
             })

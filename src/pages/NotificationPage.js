@@ -13,7 +13,7 @@ const NotificationPage = () => {
 	const [token, setToken] = useCookies(['mytoken']);
 
   const fetchNotification = async () => {
-    await axios.get('http://127.0.0.1:8000/webapp/notification', {
+    await axios.get('https://hiremeapi-production.up.railway.app/webapp/notification', {
       headers: {
         'Accept': 'application/json',
         'Authorization': 'Token ' + token['mytoken']

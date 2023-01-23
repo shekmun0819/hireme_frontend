@@ -15,7 +15,7 @@ const Footer = (): JSX.Element => {
   const [footer, setFooter] = useState<FooterProps[]>([]);
   
   const fetchFooter = () => {
-    axios.get<FooterProps[]>('http://127.0.0.1:8000/footer', {
+    axios.get<FooterProps[]>('https://hiremeapi-production.up.railway.app/footer', {
       headers: {
         'Accept': 'application/json',
       }

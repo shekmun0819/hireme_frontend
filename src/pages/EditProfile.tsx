@@ -108,7 +108,7 @@ const EditProfile = (): JSX.Element => {
     const [freelancerProfile, setFreelancerProfile] = useState<FreelancerProfileProps[]>([]);
     const fetchFreelancerProfile = () => {
         
-        axios.get<FreelancerProfileProps[]>('http://127.0.0.1:8000/webapp/freelancer', {
+        axios.get<FreelancerProfileProps[]>('https://hiremeapi-production.up.railway.app/webapp/freelancer', {
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Token ' + token['mytoken']
@@ -163,7 +163,7 @@ const EditProfile = (): JSX.Element => {
     };
 
     const fetchUser = () => {
-        axios.get<UserProps[]>('http://127.0.0.1:8000/webapp/user', {
+        axios.get<UserProps[]>('https://hiremeapi-production.up.railway.app/webapp/user', {
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Token ' + token['mytoken']
@@ -185,7 +185,7 @@ const EditProfile = (): JSX.Element => {
 		data.append('email', email)
 		data.append('contact', contact)
 
-        axios.put('http://127.0.0.1:8000/webapp/user/', data, {
+        axios.put('https://hiremeapi-production.up.railway.app/webapp/user/', data, {
             headers: {
             'Accept': 'application/json',
             'Authorization': 'Token ' + token['mytoken']
@@ -208,7 +208,7 @@ const EditProfile = (): JSX.Element => {
 		data.append('github_url', github_url)
 		data.append('facebook_url', facebook_url)
 
-        axios.put('http://127.0.0.1:8000/webapp/freelancer/', data, {
+        axios.put('https://hiremeapi-production.up.railway.app/webapp/freelancer/', data, {
             headers: {
             'Accept': 'application/json',
             'Authorization': 'Token ' + token['mytoken']

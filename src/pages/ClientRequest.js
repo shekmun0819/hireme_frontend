@@ -63,7 +63,7 @@ const ClientRequest = () => {
 	console.log("Selected Booking->>>", selectedBookings)
 	console.log("Token", token['mytoken'])
 	console.log("Action", action)
-	await axios.put('http://127.0.0.1:8000/webapp/client-request/',
+	await axios.put('https://hiremeapi-production.up.railway.app/webapp/client-request/',
 	{
 		selected: selectedBookings,
 		action: action
@@ -85,7 +85,7 @@ const ClientRequest = () => {
 	};
 
 	const fetchBookings = async () => {
-    await axios.get('http://127.0.0.1:8000/webapp/client-request', {
+    await axios.get('https://hiremeapi-production.up.railway.app/webapp/client-request', {
       headers: {
         'Accept': 'application/json',
 		'Authorization': 'Token ' + token['mytoken']
