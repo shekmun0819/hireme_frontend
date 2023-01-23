@@ -58,7 +58,7 @@ const MyService = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const fetchMyServices = async () => {
-    await axios.get('https://hiremeapi-production.up.railway.app/webapp/my-service/', {
+    await axios.get('https://hireme-backend.up.railway.app//webapp/my-service/', {
       headers: {
         'Accept': 'application/json',
         'Authorization': 'Token ' + token['mytoken']
@@ -78,7 +78,7 @@ const MyService = () => {
 		data.append("serviceImage", uploadedFile)
 		data.append("serviceID", selectedService) // use serviceID variable
 
-		await axios.put('https://hiremeapi-production.up.railway.app/webapp/my-service/', data, {
+		await axios.put('https://hireme-backend.up.railway.app//webapp/my-service/', data, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ const MyService = () => {
 	};
 
   const onDeleteService = async () => {
-		await axios.delete('https://hiremeapi-production.up.railway.app/webapp/my-service/', {
+		await axios.delete('https://hireme-backend.up.railway.app//webapp/my-service/', {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
