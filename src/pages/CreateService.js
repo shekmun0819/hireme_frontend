@@ -55,7 +55,7 @@ const CreateService = () => {
 		data.append("serviceImage", uploadedFile)
 		data.append("userID", 4) // use userID variable (freelancer)
 
-		await axios.post('https://hireme-backend.up.railway.app/webapp/create-service/', data, { //API need to change to services
+		await axios.post('https://hiremeapi-production.up.railway.app/webapp/create-service/', data, { //API need to change to services
 		headers: {
 			'Accept': 'application/json',
 			'Authorization': 'Token ' + token['mytoken']

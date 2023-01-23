@@ -20,7 +20,7 @@ const Services = (): JSX.Element => {
 
   const fetchProducts = () => {
     //take from backend thru JSON API
-    axios.get<ServicesProps[]>('https://hireme-backend.up.railway.app/webapp/', { //API need to change to services
+    axios.get<ServicesProps[]>('https://hiremeapi-production.up.railway.app/webapp/', { //API need to change to services
       headers: {
         'Accept': 'application/json'
       }

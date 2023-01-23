@@ -74,7 +74,7 @@ const UserProfile = (): JSX.Element => {
 
     const fetchFreelancerProfile = () => {
         
-        axios.get<FreelancerProfileProps[]>('https://hireme-backend.up.railway.app/webapp/freelancer', {
+        axios.get<FreelancerProfileProps[]>('https://hiremeapi-production.up.railway.app/webapp/freelancer', {
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Token ' + token['mytoken']
@@ -87,7 +87,7 @@ const UserProfile = (): JSX.Element => {
     };
 
     const fetchFreelancerPreviousProjects = (uid:any) => {
-        axios.get<PreviousProjectsProps[]>('https://hireme-backend.up.railway.app/webapp/previousprojects', {
+        axios.get<PreviousProjectsProps[]>('https://hiremeapi-production.up.railway.app/webapp/previousprojects', {
             headers: {
                 'Accept': 'application/json',
             },
@@ -102,7 +102,7 @@ const UserProfile = (): JSX.Element => {
     };
 
     const fetchUserPreviousBookings = (uid:any) => {
-        axios.get<PreviousBookingsProps[]>('https://hireme-backend.up.railway.app/webapp/previousbookings', {
+        axios.get<PreviousBookingsProps[]>('https://hiremeapi-production.up.railway.app/webapp/previousbookings', {
             headers: {
                 'Accept': 'application/json',
             },
@@ -117,7 +117,7 @@ const UserProfile = (): JSX.Element => {
     };
 
     const fetchUser = () => {
-        axios.get<UserProps[]>('https://hireme-backend.up.railway.app/webapp/user', {
+        axios.get<UserProps[]>('https://hiremeapi-production.up.railway.app/webapp/user', {
             headers: {
                 'Accept': 'application/json',
                 'Authorization': 'Token ' + token['mytoken']
