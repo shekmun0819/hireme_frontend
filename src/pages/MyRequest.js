@@ -70,7 +70,7 @@ const MyRequest = () => {
     // Get selected rows' details
     var selectedBookings = myRequest.filter((row) => selectedRows.includes(row.booking_id));
 
-		await axios.put('https://hireme-backend.up.railway.app//webapp/my-request/', selectedBookings, {
+		await axios.put('https://hireme-backend.up.railway.app/webapp/my-request/', selectedBookings, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const MyRequest = () => {
 	};
 
 	const fetchMyRequest = async () => {
-    await axios.get('https://hireme-backend.up.railway.app//webapp/my-request', {
+    await axios.get('https://hireme-backend.up.railway.app/webapp/my-request', {
       headers: {
         'Accept': 'application/json',
         'Authorization': 'Token ' + token['mytoken']

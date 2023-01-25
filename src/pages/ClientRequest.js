@@ -63,7 +63,7 @@ const ClientRequest = () => {
 	console.log("Selected Booking->>>", selectedBookings)
 	console.log("Token", token['mytoken'])
 	console.log("Action", action)
-	await axios.put('https://hireme-backend.up.railway.app//webapp/client-request/',
+	await axios.put('https://hireme-backend.up.railway.app/webapp/client-request/',
 	{
 		selected: selectedBookings,
 		action: action
@@ -72,7 +72,7 @@ const ClientRequest = () => {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-		'Authorization': 'Token ' + "03142ab0737da699429bceba4aff16279986167e"
+		'Authorization': 'Token ' + token['mytoken']
       },
     })
     .then(response => {
@@ -85,7 +85,7 @@ const ClientRequest = () => {
 	};
 
 	const fetchBookings = async () => {
-    await axios.get('https://hireme-backend.up.railway.app//webapp/client-request', {
+    await axios.get('https://hireme-backend.up.railway.app/webapp/client-request', {
       headers: {
         'Accept': 'application/json',
 		'Authorization': 'Token ' + token['mytoken']

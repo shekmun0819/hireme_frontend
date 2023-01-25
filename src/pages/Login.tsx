@@ -39,7 +39,7 @@ const Login = (): JSX.Element => {
 		data.append('username', username)
 		data.append('password', password)
 
-        axios.post('https://hireme-backend.up.railway.app//webapp/auth/', data)
+        axios.post('https://hireme-backend.up.railway.app/webapp/auth/', data)
             .then((response) => {
                 setToken('mytoken',response.data.token)
             })

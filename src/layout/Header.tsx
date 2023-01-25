@@ -38,7 +38,7 @@ const Header = ({ onSidebarOpen }: Props): JSX.Element => {
 	const [token, setToken, removeCookie] = useCookies(['mytoken']);
   const navigate = useNavigate();
   const fetchUser = () => {
-    axios.get<UserProps[]>('https://hireme-backend.up.railway.app//webapp/user', {
+    axios.get<UserProps[]>('https://hireme-backend.up.railway.app/webapp/user', {
         headers: {
             'Accept': 'application/json',
             'Authorization': 'Token ' + token['mytoken']
