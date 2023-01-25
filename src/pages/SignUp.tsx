@@ -126,7 +126,7 @@ const SignUp = (): JSX.Element => {
 		data.append('is_freelancer', isFreelancer)
 
         console.log(data.get('profile_image'))
-        await sleep(1500) 
+        await sleep(3000) 
         await axios.put('https://hireme-backend.up.railway.app/webapp/profile/', data, {
             headers: {
             'Accept': 'application/json',
@@ -150,7 +150,7 @@ const SignUp = (): JSX.Element => {
 		data.append('username', username)
 		data.append('password', password)
 
-        await sleep(1500) 
+        await sleep(3500) 
 		await axios.post('https://hireme-backend.up.railway.app/webapp/auth/', data)
 			.then((response) => {
 				setToken('mytoken',response.data.token)
